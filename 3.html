@@ -12,29 +12,13 @@
 </script>
     <title>WEB1 - html</title>
     <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
     <input type="button" value="night" onclick="
-        document.querySelector('body').style.backgroundColor='black';
-        document.querySelector('body').style.color='white';
-    ">
-    <input type="button" value="day" onclick="
-        document.querySelector('body').style.backgroundColor='white';
-        document.querySelector('body').style.color='black';
-    ">
-    <input type="button" value="black" onclick="
-        if(document.querySelector('body').dataset.mode === 'day'){
-            document.querySelector('body').style.backgroundColor='black';
-            document.querySelector('body').style.color='white';
-            document.querySelector('body').dataset.mode = 'night';
-            this.value = 'day';
-        } else {
-            document.querySelector('body').style.backgroundColor='white';
-            document.querySelector('body').style.color='black';
-            document.querySelector('body').dataset.mode = 'day';
-            this.value = 'night';
-        }
+        nightDayHandler(this)
     ">
     <ol>
         <li><a href="1.html">HTML</a></li>
